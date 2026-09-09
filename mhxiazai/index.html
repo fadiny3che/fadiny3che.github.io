@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫画下载-漫画下载指南与高清资源获取全攻略</title>
+    <meta name="description" content="提供全面的漫画下载指南，涵盖主流漫画下载工具、格式选择、合法资源渠道与注意事项，帮助漫画爱好者高效安全地获取高清漫画资源。">
+    <meta name="keywords" content="漫画下载,漫画下载方法,漫画下载工具,高清漫画,漫画格式,合法漫画下载,漫画阅读器">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f6f7fb;
+            color: #1e2430;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* 头部区域 */
+        .site-header {
+            background: linear-gradient(135deg, #1e2a3a 0%, #2c3e50 100%);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #ff6b6b;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        .main-nav a {
+            color: #cfd8e3;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+        }
+
+        .main-nav a:hover {
+            color: #ffffff;
+            border-bottom-color: #ff6b6b;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.8rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        /* 首屏主视觉 */
+        .hero-section {
+            background: linear-gradient(145deg, #ffffff 0%, #eef2f7 100%);
+            padding: 60px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1.2;
+        }
+
+        .hero-text h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 18px;
+            color: #1e2a3a;
+        }
+
+        .hero-text h1 span {
+            color: #ff6b6b;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 24px;
+            max-width: 600px;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .badge {
+            background: #ffffff;
+            border: 1px solid #d3dce6;
+            border-radius: 30px;
+            padding: 6px 16px;
+            font-size: 0.9rem;
+            color: #2d3748;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .hero-stats {
+            flex: 0.8;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 32px 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid #e8edf3;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ff6b6b;
+        }
+
+        .stat-label {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        /* 通用区块 */
+        .section-block {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1e2a3a;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: #ff6b6b;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: #718096;
+            font-size: 1rem;
+            margin-bottom: 32px;
+            max-width: 700px;
+        }
+
+        /* 内容卡片网格 */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+        }
+
+        .info-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #e9edf2;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .info-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .info-card p {
+            color: #5a6577;
+            font-size: 0.95rem;
+        }
+
+        /* 步骤列表 */
+        .steps-list {
+            list-style: none;
+            counter-reset: step-counter;
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 30px 10px 30px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+            border: 1px solid #e9edf2;
+        }
+
+        .steps-list li {
+            counter-increment: step-counter;
+            padding: 0 0 24px 50px;
+            position: relative;
+            margin-bottom: 16px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .steps-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 34px;
+            height: 34px;
+            background: #ff6b6b;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 34px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .steps-list h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: #2d3748;
+        }
+
+        .steps-list p {
+            color: #5a6577;
+            font-size: 0.95rem;
+        }
+
+        /* 表格 */
+        .table-wrapper {
+            overflow-x: auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border: 1px solid #e9edf2;
+        }
+
+        .format-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        .format-table th {
+            background: #f1f5f9;
+            color: #2d3748;
+            font-weight: 600;
+            text-align: left;
+            padding: 14px 20px;
+            font-size: 0.95rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .format-table td {
+            padding: 14px 20px;
+            border-bottom: 1px solid #edf2f7;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        .format-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .format-table tr:hover td {
+            background-color: #fafbfc;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e6f6ef;
+            color: #2b6e5b;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .tag-warn {
+            background: #fef3e2;
+            color: #9c6c1e;
+        }
+
+        /* 注意事项 */
+        .notice-box {
+            background: #fffbea;
+            border-left: 4px solid #f5a623;
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+        }
+
+        .notice-box strong {
+            color: #7c5c10;
+        }
+
+        /* FAQ */
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e9edf2;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .faq-question {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1e2a3a;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            background: #ff6b6b;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            color: #5a6577;
+            padding-left: 34px;
+            font-size: 0.95rem;
+        }
+
+        /* CTA 区域 */
+        .cta-box {
+            background: linear-gradient(120deg, #1e2a3a 0%, #2c3e50 100%);
+            border-radius: 16px;
+            padding: 40px;
+            color: #fff;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .cta-box h2 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+        }
+
+        .cta-box p {
+            color: #aab9ca;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s ease;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #e85a5a;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #ff6b6b;
+            color: #ff6b6b;
+        }
+
+        .btn-outline:hover {
+            background: #ff6b6b;
+            color: #fff;
+        }
+
+        /* 页脚 */
+        .site-footer {
+            background: #1e2a3a;
+            color: #aebccb;
+            padding: 40px 0 24px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 24px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 14px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #aebccb;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .footer-col a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2c3e50;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #1e2a3a;
+                padding: 20px 24px;
+                gap: 16px;
+                border-top: 1px solid #2c3e50;
+            }
+
+            .main-nav ul.open {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .grid-3, .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .cta-box {
+                padding: 28px 20px;
+            }
+
+            .cta-box h2 {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .hero-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-badges {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .stat-number {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <span class="logo-icon">漫</span>
+                <span class="logo-text">漫画下载指南</span>
+            </div>
+            <nav class="main-nav">
+                <ul id="nav-menu">
+                    <li><a href="#overview">下载总览</a></li>
+                    <li><a href="#formats">漫画格式</a></li>
+                    <li><a href="#tools">常用工具</a></li>
+                    <li><a href="#steps">下载步骤</a></li>
+                    <li><a href="#tips">注意事项</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="menu-btn" aria-label="打开菜单">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- 首屏 -->
+        <section class="hero-section" id="overview">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>漫画下载 <span>方法与资源全解析</span></h1>
+                    <p>无论你是刚接触漫画的新读者，还是收藏多年的资深漫迷，都能在这里找到合适的漫画下载方案。从格式选择到工具推荐，从合法渠道到安全提示，一文理清漫画下载的所有关键环节。</p>
+                    <div class="hero-badges">
+                        <span class="badge">📚 高清资源</span>
+                        <span class="badge">🛡️ 安全下载</span>
+                        <span class="badge">📱 多端阅读</span>
+                        <span class="badge">⚡ 批量获取</span>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">主流漫画格式</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">常用下载工具</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">合法渠道支持</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 漫画格式 -->
+        <section class="section-block" id="formats">
+            <div class="container">
+                <h2 class="section-title">漫画下载格式怎么选？</h2>
+                <p class="section-subtitle">不同格式影响画质、文件大小和阅读体验，了解格式特性是高效下载的第一步。</p>
+                <div class="table-wrapper">
+                    <table class="format-table">
+                        <thead>
+                            <tr>
+                                <th>格式</th>
+                                <th>特点</th>
+                                <th>适合场景</th>
+                                <th>阅读器</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>PDF</strong></td>
+                                <td>通用性强，排版固定，文件较大</td>
+                                <td>电脑阅读、打印收藏</td>
+                                <td>任意PDF阅读器</td>
+                            </tr>
+                            <tr>
+                                <td><strong>EPUB</strong></td>
+                                <td>可重排版，文字缩放自适应，文件较小</td>
+                                <td>手机、平板阅读</td>
+                                <td>Apple Books、KyBook等</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MOBI</strong></td>
+                                <td>Kindle专用格式，支持丰富排版</td>
+                                <td>Kindle设备阅读</td>
+                                <td>Kindle、Calibre</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CBZ / CBR</strong></td>
+                                <td>漫画专用格式，按页压缩图片，无损画质</td>
+                                <td>漫画阅读器、收藏原图</td>
+                                <td>Comic Screen、YACReader</td>
+                            </tr>
+                            <tr>
+                                <td><strong>图片包 (JPG/PNG)</strong></td>
+                                <td>直接存放单页图片，灵活但需手动翻页</td>
+                                <td>快速预览、少量页面</td>
+                                <td>系统相册或看图软件</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下载工具与资源渠道 -->
+        <section class="section-block" id="tools">
+            <div class="container">
+                <h2 class="section-title">漫画下载常用工具与渠道</h2>
+                <p class="section-subtitle">借助合适的下载工具可以大幅提升效率，同时应优先选择合法授权的内容平台。</p>
+                <div class="grid-3">
+                    <div class="info-card">
+                        <div class="card-icon">🔍</div>
+                        <h3>官方漫画App</h3>
+                        <p>腾讯动漫、Bilibili漫画、快看漫画等平台提供正版下载功能。在应用内购买或订阅后，可将漫画缓存至本地离线阅读，画质有保障且支持多设备同步。</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">📥</div>
+                        <h3>专用下载管理器</h3>
+                        <p>Internet Download Manager (IDM) 或 Free Download Manager 可帮助抓取网页中的漫画图片资源，支持批量下载和断点续传，适合有一定技术基础的用户。</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">🔄</div>
+                        <h3>格式转换工具</h3>
+                        <p>Calibre 是强大的电子书管理工具，支持 EPUB、MOBI、PDF 等格式互转。下载后若需调整格式以适配不同设备，Calibre 是首选。</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">🌐</div>
+                        <h3>公共版权资源站</h3>
+                        <p>许多经典漫画已进入公共版权领域，可通过古登堡计划、Internet Archive 等平台免费合法下载扫描版或数字重制版漫画，适合收藏老作品。</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">📡</div>
+                        <h3>漫画聚合阅读器</h3>
+                        <p>部分开源阅读器（如 Tachiyomi 的扩展插件）支持从多个漫画源获取内容，但使用时务必确认所访问的源是否获得授权，避免侵权风险。</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon">☁️</div>
+                        <h3>网盘资源分享</h3>
+                        <p>部分漫友会分享整理好的漫画资源包。建议优先选择官方发布或作者授权的资源，对于个人扫描分享的资源，需注意版权限制并尽快删除。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 下载步骤 -->
+        <section class="section-block" id="steps">
+            <div class="container">
+                <h2 class="section-title">漫画下载完整操作流程</h2>
+                <p class="section-subtitle">从确定需求到最终阅读，以下步骤帮助你系统完成漫画下载。</p>
+                <div class="grid-2">
+                    <div>
+                        <ol class="steps-list">
+                            <li>
+                                <h3>明确下载需求</h3>
+                                <p>确定要下载的漫画名称、卷数或章节范围，以及你希望在哪种设备上阅读（手机/平板/电纸书/电脑）。</p>
+                            </li>
+                            <li>
+                                <h3>选择合法资源渠道</h3>
+                                <p>优先使用官方漫画App的离线缓存功能。如需下载到本地文件，请确认内容版权状态，选择公共版权资源或已获授权的平台。</p>
+                            </li>
+                            <li>
+                                <h3>确定漫画格式</h3>
+                                <p>根据阅读设备选择合适格式。Kindle 用户选 MOBI/AZW3，其他电纸书或平板选 EPUB，电脑收藏可考虑 PDF 或 CBZ。</p>
+                            </li>
+                            <li>
+                                <h3>执行下载操作</h3>
+                                <p>在官方App内点击“下载”或“缓存”按钮。若使用下载管理器，需配置批量抓取规则，注意设置合适的延迟避免给服务器造成压力。</p>
+                            </li>
+                            <li>
+                                <h3>整理与管理文件</h3>
+                                <p>下载完成后，建议使用 Calibre 等工具整理元数据（书名、作者、封面），建立清晰的文件夹结构，方便后续查找。</p>
+                            </li>
+                            <li>
+                                <h3>同步至阅读设备</h3>
+                                <p>通过USB、局域网传输或云同步服务将漫画文件传送到目标设备，并使用合适的阅读器打开即可享受阅读。</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div>
+                        <div class="info-card" style="margin-bottom: 24px;">
+                            <h3>💡 批量下载小技巧</h3>
+                            <p>需要下载整部漫画时，建议先下载前几页测试画质和文件完整性。若使用自动化工具，设置单线程或限速下载可以降低被网站屏蔽的风险，同时避免影响其他用户访问。</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>📱 手机端下载建议</h3>
+                            <p>iOS 用户可使用 Safari 的“下载管理器”功能，Android 用户则可通过系统下载器或第三方下载工具。注意在“设置”中指定下载目录，方便后续导入阅读App。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 注意事项 -->
+        <section class="section-block" id="tips">
+            <div class="container">
+                <h2 class="section-title">漫画下载必读注意事项</h2>
+                <p class="section-subtitle">安全、合法、高效地下载漫画，需要留意以下几个关键方面。</p>
+                <div class="grid-2">
+                    <div>
+                        <div class="notice-box">
+                            <strong>版权意识：</strong> 下载和传播未经授权的漫画属于侵权行为。支持正版漫画是保护创作者权益的重要方式，请优先选择官方渠道。
+                        </div>
+                        <div class="notice-box">
+                            <strong>文件安全：</strong> 从非官方渠道下载的压缩包或PDF可能携带恶意程序。建议使用杀毒软件扫描后再打开，避免运行其中的可执行文件。
+                        </div>
+                    </div>
+                    <div>
+                        <div class="notice-box">
+                            <strong>画质甄别：</strong> 部分资源号称“高清”但实际经过压缩。下载前可查看文件分辨率或样本图片，避免浪费时间和流量。
+                        </div>
+                        <div class="notice-box">
+                            <strong>存储空间：</strong> 高清漫画单卷容量可达数百MB，批量下载前请确认设备剩余空间，并养成定期整理的习惯。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA 引导 -->
+        <section class="section-block" style="padding-top: 0;">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>开始你的漫画收藏之旅</h2>
+                    <p>选择正版渠道下载漫画，既能获得最佳画质，也支持你喜爱的作者持续创作。现在就整理你的下载清单吧。</p>
+                    <a href="#formats" class="btn">查看格式指南</a>
+                    <a href="#faq" class="btn btn-outline" style="margin-left: 12px;">阅读常见问题</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section-block" id="faq">
+            <div class="container">
+                <h2 class="section-title">漫画下载常见问题解答</h2>
+                <p class="section-subtitle">针对漫画下载过程中常见疑问的集中解答。</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">漫画下载后无法打开或显示乱码怎么办？</div>
+                        <div class="faq-answer">首先确认文件是否完整下载。若是PDF或EPUB乱码，尝试更换阅读器。若是压缩包文件，检查是否缺少分卷或解压密码。建议从官方渠道重新下载。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何在Kindle上下载并阅读漫画？</div>
+                        <div class="faq-answer">Kindle支持MOBI/AZW3格式，可通过“发送至Kindle”功能将文件推送到设备。若下载的是EPUB或PDF，可使用Calibre转换为MOBI格式后再传输。注意漫画适合用平板或大屏设备阅读效果更佳。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">下载漫画是否都需要付费？</div>
+                        <div class="faq-answer">不一定。许多平台提供免费章节或限时免费活动。公共版权作品（如作者逝世超过50年）可以免费下载。但新近出版的漫画通常需要付费购买或订阅。请尊重版权，选择合法途径。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">漫画下载速度慢如何解决？</div>
+                        <div class="faq-answer">官方App下载速度通常稳定。若使用浏览器直接下载较慢，可尝试使用下载管理器并开启多线程。同时检查网络连接，避开网络高峰期。切勿使用破解工具，以免带来安全风险。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">能否将下载的漫画分享给朋友？</div>
+                        <div class="faq-answer">未经授权传播版权漫画属于侵权行为。即使自己购买的数字内容，通常也仅限个人使用。建议朋友通过正规渠道获取，你可以分享阅读推荐或购买链接。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>漫画下载指南</h4>
+                    <p>专注于为漫画爱好者提供安全、高效、合法的下载知识与资源导航。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <a href="#overview">下载总览</a>
+                    <a href="#formats">格式说明</a>
+                    <a href="#tools">工具推荐</a>
+                    <a href="#faq">常见问题</a>
+                </div>
+                <div class="footer-col">
+                    <h4>版权声明</h4>
+                    <p>我们倡导支持正版漫画，尊重创作者知识产权。本站仅提供技术知识分享，不提供任何盗版资源下载。</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 漫画下载指南 | 本页面仅提供技术交流信息</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.getElementById('menu-btn');
+            const navMenu = document.getElementById('nav-menu');
+            if (menuBtn && navMenu) {
+                menuBtn.addEventListener('click', function() {
+                    navMenu.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+      </html>
